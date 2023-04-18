@@ -12,9 +12,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
-using NETMicroservices.Data;
+using PlatformService.Data;
 
-namespace NETMicroservices
+namespace PlatformService
 {
     public class Startup
     {
@@ -32,7 +32,7 @@ namespace NETMicroservices
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "NETMicroservices", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "PlatformService", Version = "v1" });
             });
         }
         
@@ -46,7 +46,7 @@ namespace NETMicroservices
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "NETMicroservices v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "PlatformService v1"));
             }
 
             app.UseHttpsRedirection();
