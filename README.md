@@ -1,6 +1,12 @@
 # .NET-Microservices-Full-Course
 This is repo for my jounery along .NET Microservices – Full Course by  Les Jackson
+
+Link to the video down below:
+
 https://www.youtube.com/watch?v=DgVjEo3OGBI
+
+
+Note for me:
 
 This course does not...
 * Focus on DDD, Bounded Context etc.
