@@ -1,5 +1,5 @@
 # .NET-Microservices-Full-Course
-This is repo for my jounery along .NET Microservices – Full Course by  Les Jackson
+This is repo for my journey along .NET Microservices – Full Course by  Les Jackson
 
 Link to the video down below:
 
