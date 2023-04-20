@@ -16,7 +16,7 @@ namespace PlatformService.Controllers
         private readonly IMapper _mapper;
 
         public PlatformsController(IPlatformRepo repository, IMapper mapper)
-        {
+        { 
             _repository = repository;
             _mapper = mapper;
         }
@@ -25,7 +25,7 @@ namespace PlatformService.Controllers
         public ActionResult<IEnumerable<PlatformReadDto>> GetPlatforms()
         {
             Console.WriteLine("--> Getting Platforms....");
-
+        
             var platformItem = _repository.GetAllPlatforms();
 
             return Ok(_mapper.Map<IEnumerable<PlatformReadDto>>(platformItem));
@@ -50,11 +50,10 @@ namespace PlatformService.Controllers
             _repository.CreatePlatform(platformModel);
             _repository.SaveChanges();
 
-
             var platformReadDto = _mapper.Map<PlatformReadDto>(platformModel);
 
             return CreatedAtRoute(nameof(GetPlatformById), new { Id = platformReadDto.Id }, platformReadDto);
         }
-
+        
     }
 }
