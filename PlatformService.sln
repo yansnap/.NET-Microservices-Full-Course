@@ -4,7 +4,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlatformService", "Platform
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CommandService", "CommandService", "{0ECC62FC-AABA-4E56-8586-E284BF840DB0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandService", "CommandService\CommandService.csproj", "{01456BE6-DB39-4CDC-8F33-303A240158B9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandsService", "CommandsService\CommandsService.csproj", "{01456BE6-DB39-4CDC-8F33-303A240158B9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
