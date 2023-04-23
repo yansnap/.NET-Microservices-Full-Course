@@ -4,17 +4,17 @@ metadata:
   name: platforms-depl
 spec:
   replicas: 1
-  selector: 
+  selector:
     matchLabels:
       app: platformservice
   template:
     metadata:
       labels:
         app: platformservice
-    spec: 
+    spec:
       containers:
         - name: platformservice
-          image: yansnap/platformservice:latest          
+          image: yansnap/platformservice:latest
 ---
 apiVersion: v1
 kind: Service
@@ -25,8 +25,12 @@ spec:
   selector:
     app: platformservice
   ports:
-  - name: platformservice
-    protocol: TCP
-    port: 80
-    targetPort: 80
+    - name: platformservice
+      protocol: TCP
+      port: 80
+      targetPort: 80
+    - name: platformgrpc
+      protocol: TCP
+      port: 666
+      targetPort: 666
           
