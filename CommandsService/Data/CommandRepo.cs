@@ -30,12 +30,18 @@ namespace CommandsService.Data
             {
                 throw new ArgumentNullException(nameof(plat));
             }
+
             _context.Platforms.Add(plat);
         }
 
         public bool PlatformExists(int platformId)
         {
             return _context.Platforms.Any(p => p.Id == platformId);
+        }
+
+        public bool ExternalPlatformExist(int externalPlatformId)
+        {
+            return _context.Platforms.Any(p => p.ExternalID == externalPlatformId);
         }
 
         public IEnumerable<Command> GetCommandsForPlatform(int platformId)
@@ -56,6 +62,7 @@ namespace CommandsService.Data
             {
                 throw new ArgumentNullException(nameof(command));
             }
+
             command.PlatformId = platformId;
             _context.Commands.Add(command);
         }
